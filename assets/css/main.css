@@ -1,1 +1,58 @@
-@import './base.css';
+@import "./base.css";
+body {
+  font-family: var(--mainFont);
+  background-color: #eee;
+}
+.header {
+  display: flex;
+  background-color: #fff;
+  height: 70px;
+}
+.header .row {
+    align-items: center;
+  }
+  .Logo_Store_Name{
+    display: flex;
+    align-items: center;
+}
+.header .logo .Logo_Store_Name {
+  display: flex;
+  color: var(--mainColor);
+  gap: 5px;
+  font-size: 20px;
+}
+.header .logo .Logo_Store_Name img {
+  width: 50px;
+}
+.header ul {
+  font-size: 22px;
+  display: flex;
+  gap: 25px;
+}
+.active {
+  font-weight: 600;
+  color: #101928;
+}
+.nav li a {
+  color: #101928;
+}
+.header .auth {
+  display: flex;
+  gap: 20px;
+}
+.header .auth a {
+  padding: 12px 50px;
+  border: solid 1px;
+  border-color: var(--mainColor);
+  border-radius: 7px;
+  font-family:var(--subFont);
+  font-size: 15px;
+  font-weight: bold;
+}
+.Register{
+    background-color: var(--mainColor);
+    color: #fff;
+}
+.Login{
+    color: var(--mainColor);
+}
