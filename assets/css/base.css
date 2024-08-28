@@ -16,7 +16,7 @@ ul{
     list-style-type: none;
 }
 .container{
-width: calc(100% - 200px);
+width: calc(100% - 120px);
 margin: auto;
 
 }
@@ -24,4 +24,5 @@ margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }

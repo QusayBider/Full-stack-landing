@@ -6,17 +6,19 @@ body {
 .header {
   display: flex;
   background-color: #fff;
-  height: 70px;
+ padding: 15px 0px;
 }
-.header .row {
-    align-items: center;
-  }
+
   .Logo_Store_Name{
     display: flex;
     align-items: center;
 }
+.nav{
+  padding: 0px 3px;
+}
 .header .logo .Logo_Store_Name {
   display: flex;
+  flex-wrap: wrap;
   color: var(--mainColor);
   gap: 5px;
   font-size: 20px;
@@ -27,7 +29,11 @@ body {
 .header ul {
   font-size: 22px;
   display: flex;
-  gap: 25px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.menu{
+  display: none ;
 }
 .active {
   font-weight: 600;
@@ -38,10 +44,11 @@ body {
 }
 .header .auth {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .header .auth a {
-  padding: 12px 50px;
+  padding: 12px 40px;
   border: solid 1px;
   border-color: var(--mainColor);
   border-radius: 7px;
@@ -55,4 +62,21 @@ body {
 }
 .Login{
     color: var(--mainColor);
+}
+
+/* media header */
+@media screen and (max-width:768px) {
+  .auth a {
+    display: none;
+  }
+  }
+
+@media screen and (max-width:1200px) {
+.nav{
+  display: none;
+}
+.menu {
+  display: block;
+  order: calc(2);
+}
 }
