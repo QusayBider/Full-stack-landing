@@ -3,27 +3,28 @@ body {
   font-family: var(--mainFont);
   background-color: #eee;
 }
+/*start header css*/
 .header {
   display: flex;
   background-color: #fff;
- padding: 15px 0px;
+  padding: 15px 0px;
 }
 
-  .Logo_Store_Name{
-    display: flex;
-    align-items: center;
+.Logo_Store_Name {
+  display: flex;
+  align-items: center;
 }
-.nav{
+.navbar {
   padding: 0px 3px;
 }
-.header .logo .Logo_Store_Name {
+.logo .Logo_Store_Name {
   display: flex;
   flex-wrap: wrap;
   color: var(--mainColor);
   gap: 5px;
   font-size: 20px;
 }
-.header .logo .Logo_Store_Name img {
+.logo .Logo_Store_Name img {
   width: 50px;
 }
 .header ul {
@@ -32,14 +33,14 @@ body {
   flex-wrap: wrap;
   gap: 12px;
 }
-.menu{
-  display: none ;
+.menu {
+  display: none;
 }
 .active {
   font-weight: 600;
   color: #101928;
 }
-.nav li a {
+.navbar li a {
   color: #101928;
 }
 .header .auth {
@@ -52,45 +53,122 @@ body {
   border: solid 1px;
   border-color: var(--mainColor);
   border-radius: 7px;
-  font-family:var(--subFont);
+  font-family: var(--subFont);
   font-size: 15px;
   font-weight: bold;
 }
-.Register{
-    background-color: var(--mainColor);
-    color: #fff;
+.Register {
+  background-color: var(--mainColor);
+  color: #fff;
 }
-.Login{
-    color: var(--mainColor);
+.Login {
+  color: var(--mainColor);
 }
 
 /* media header */
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .auth a {
     display: none;
   }
-  .container{
+  .container {
     width: calc(100% - 30px);
   }
-  }
+}
 
-@media screen and (max-width:992px) {
-.nav{
-  display: none;
+@media screen and (max-width: 992px) {
+  .navbar {
+    display: none;
+  }
+  .menu {
+    display: block;
+    order: calc(2);
+  }
 }
-.menu {
-  display: block;
-  order: calc(2);
-}
-}
-@media screen and (max-width:1100px) {
-  .container{
+@media screen and (max-width: 1200px) {
+  .container {
     width: calc(100% - 60px);
   }
   .header .auth a {
-    padding: 12px 25px; 
-    }
-  .header ul{
-   gap: 8px;
+    padding: 12px 25px;
+  }
+  .header ul {
+    gap: 8px;
   }
 }
+/*end header css*/
+/*Start Footer css*/
+footer {
+  background-color: #393e46;
+  color: #f4f4f4;
+  a {
+    color: #f4f4f4;
+  }
+  padding: 60px 0px;
+}
+footer .row{
+  gap: 250px;
+}
+.footer-start {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 30px;
+  width: 500px;
+}
+.footer .logo .Logo_Store_Name {
+  color: #f4f4f4;
+}
+.footer-start .icon {
+  display: flex;
+  flex-wrap: wrap;
+  img {
+    width: 20px;
+    border: solid 1px;
+    padding: 10px;
+  }
+  gap: 15px;
+}
+.footer-end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.footer-end .item{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-end .item .nav{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+
+}
+@media screen and (max-width: 1400px) {
+  footer .row{
+    gap: 100px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer-start{
+    width: 100%;
+    order: 2;
+  }
+}
+@media screen and (max-width:600px){
+  .footer-end .item {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width:400px){
+  .footer-end .item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/*end footer css*/
