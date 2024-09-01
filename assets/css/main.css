@@ -98,6 +98,70 @@ body {
 }
 /*end header css*/
 
+/*Start People_opinions_about_courses css*/
+.People_opinions_about_courses{
+  background-color: #272DB0;
+  padding:20px 0px ;
+}
+.People_opinions_about_courses .row{
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.People_opinions_about_courses .image{
+width: calc((100% - 20px)/2);
+text-align: center;
+
+}
+.People_opinions_about_courses .image img{
+  width :calc(30% * 2);
+}
+.People_opinions_about_courses .opinions_information{
+width:calc((100% - 20px)/2);
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+gap: 30px;
+color: #fff;
+span{
+  color: #F0C932;
+  font-family: var(--subFont);
+}
+p{
+  width: 80%;
+};
+}
+.People_opinions_about_courses .opinions_information .data_in_numbers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  span{
+    font-weight: 500;
+  }
+  h3{
+    font-size: var(--subFont);
+    font-weight: 200;
+    font-size: 15px;
+  }
+}
+/* media People_opinions_about_courses */
+@media screen and (max-width:880px) {
+  .People_opinions_about_courses .opinions_information{
+    width:100%
+  }
+  .People_opinions_about_courses .image{
+    width: 100%;
+  }
+  .People_opinions_about_courses .image img{
+    width :calc(30% * 2);
+  }
+  .People_opinions_about_courses .opinions_information p{
+    width: 100%;
+  }
+}
+/*end People_opinions_about_courses css*/
+
+
 /*Start courses css*/
 .coursess {
   padding: 40px 0px;
@@ -242,11 +306,9 @@ body {
 width: 40%;}
   
 }
-
-
 /*end  media courses*/
-
 /*end courses css*/
+
 
 /*Start Testimonials css*/
 
@@ -269,7 +331,19 @@ width: 40%;}
   height: 70px;
   border-radius: 50%;
 }
-
+.Testimonialer{
+  position: relative;
+}
+.Testimonialer .information::after{
+  content: '';
+  position: absolute;
+  top: 0px ;
+  right: 0px;
+  border-top: 40px solid #F4F4F4;
+  border-left: 40px solid #fff;
+  border-right: 40px solid #F4F4F4;
+  border-bottom: 40px  solid #fff;
+}
 .Testimonialer {
   box-shadow: 0px 8.23719596862793px 8.23719596862793px rgba(0, 0, 0, 0.1);
   display: flex;
