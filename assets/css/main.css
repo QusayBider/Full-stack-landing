@@ -1,7 +1,7 @@
 @import "./base.css";
 body {
   font-family: var(--mainFont);
-  background-color: #eee;
+  background-color: #fff;
 }
 /*start header css*/
 .header {
@@ -9,7 +9,6 @@ body {
   background-color: #fff;
   padding: 15px 0px;
   box-shadow: 0px 1.6474391222000122px 8.23719596862793px rgba(0, 0, 0, 0.1);
-
 }
 
 .Logo_Store_Name {
@@ -99,6 +98,156 @@ body {
 }
 /*end header css*/
 
+/*Start courses css*/
+.coursess {
+  padding: 40px 0px;
+}
+.coursess .row {
+  align-items: start;
+  gap: 50px;
+}
+.coursess .courses_items {
+  box-sizing: border-box;
+  width: calc((100% - 50px) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.coursess .courses_data {
+  width: calc((100% - 50px) / 2);
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 50px;
+  gap: 30px;
+}
+
+.coursess .Course {
+  background-color: #fff;
+  width: calc((100% - 20px) / (2));
+  box-shadow: 0px 7.437575340270996px 7.437575340270996px rgba(0, 0, 0, 0.05);
+  border-radius: 5px 5px;
+  box-sizing: border-box;
+}
+.Course img {
+  width: 100%;
+  display: block;
+}
+.Course .img-data {
+  position: relative;
+  color: #fff;
+}
+.Course .img-data span:nth-of-type(1) {
+  position: absolute;
+  background-color: var(--mainColor);
+  padding: 5px;
+  top: 10px;
+  left: 1px;
+}
+.Course .img-data span:nth-of-type(2) {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-weight: 600;
+}
+
+.Course .coure_name_views {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    color: var(--mainColor);
+  }
+  span {
+    font-size: 12px;
+  }
+}
+.coursess .numbersOfVideosTeacher {
+  color: #969696;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 12px;
+}
+.coursess .course_discription {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+.coursess .courses_data span:first-of-type {
+  color: var(--mainColor);
+}
+.coursess .courses_data p {
+  color: #969696;
+  width: 50%;
+}
+.coursess .courses_data h2 {
+  font-size: 30px;
+}
+.coursess .courses_data a {
+  background-color: var(--mainColor);
+  width: fit-content;
+  padding: 12px 40px;
+  border: solid 1px;
+  border-color: var(--mainColor);
+  border-radius: 7px;
+  font-family: var(--subFont);
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* media courses  */
+@media screen and (max-width: 576px) {
+  .coursess .row{
+    flex-wrap: wrap;
+
+  }
+  .coursess .courses_items .Course,
+  .coursess .courses_data,
+  .coursess .courses_items {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 790px) {
+  .coursess .courses_items,
+  .coursess .courses_data {
+    width: 100%;
+  }
+  .Course .img-data span:nth-of-type(1),
+  .Course .img-data span:nth-of-type(2) {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 992px) {
+  .Course .coure_name_views {
+    flex-direction: column;
+    align-items: start;
+  }
+  .coursess .row{
+    justify-content: start;
+    flex-wrap: nowrap;
+  }
+  .coursess .courses_items{
+    box-sizing: border-box;
+    padding: 0px;
+    width: 55%;
+  }
+  .coursess .courses_data{
+    padding: 0px;
+width: 40%;}
+  
+}
+
+
+/*end  media courses*/
+
+/*end courses css*/
+
 /*Start Testimonials css*/
 
 .Testimonials {
@@ -150,9 +299,8 @@ body {
 @media screen and (max-width: 676px) {
   .Testimonialer {
     width: 100%;
-  
   }
-  .Testimonials .row{
+  .Testimonials .row {
     gap: 20px;
   }
 }
