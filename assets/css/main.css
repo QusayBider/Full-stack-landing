@@ -98,69 +98,187 @@ body {
 }
 /*end header css*/
 
-/*Start People_opinions_about_courses css*/
-.People_opinions_about_courses{
-  background-color: #272DB0;
-  padding:20px 0px ;
+/*Start what_we_give css*/
+.what_we_give {
+  padding: 100px 0px;
+  background-color: #f5f5f5;
 }
-.People_opinions_about_courses .row{
+.what_we_give .container {
+  padding: 50px 0px;
+  position: relative;
+}
+.what_we_give .row {
+  gap: 20px;
+}
+.what_we_give .information {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: calc(100% / 4);
+  gap: 15px;
+  span {
+    color: var(--mainColor);
+  }
+  h2 {
+    width: 75%;
+    font-size: 30px;
+  }
+  p {
+    color: #969696;
+  }
+}
+.what_we_give .Get_From_Us {
+  width: 70%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+.what_we_give .Certificate {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mainColor);
+  box-sizing: border-box;
+  border: 5px solid var(--mainColor);
+  border-radius: 10px;
+  gap: 10px;
+  padding: 20px 10px 20px 10px;
+  color: #fff;
+  font-family: var(--subFont);
+  img {
+    width: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #fff;
+  }
+  p {
+    color: #dddddd;
+    font-size: small;
+  }
+}
+.what_we_give .next_prev {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  img {
+    width: 30px;
+  }
+}
+/* media what_we_give */
+@media screen and (max-width: 1300px) {
+  .what_we_give .Certificate h3 {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .what_we_give .next_prev {
+    display: block;
+  }
+  .what_we_give .Certificate:last-of-type{
+    display: none;
+  }
+  .what_we_give .information {
+
+  width: calc(100% / 3);
+  }
+  .what_we_give .Get_From_Us {
+    width: 60%;
+  }
+  .what_we_give .information h2{
+    width: 100%;
+  }
+}
+@media screen and (max-width:768px) {
+  .what_we_give .Certificate:nth-last-of-type(3){
+    display: none;
+  }
+  .what_we_give .information h2{
+    width: 100%;
+  }
+  .what_we_give .information p {
+    font-size: 12px;
+  }
+}
+  @media screen and (max-width: 576px) {
+    .what_we_give .information,
+    .what_we_give .Get_From_Us
+    {
+      width: 100%;
+    }
+    .what_we_give .Certificate:nth-last-of-type(3){
+      display:flex ;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .what_we_give .Certificate:nth-last-of-type(3){
+      display:none ;
+    }
+  }
+
+/*end what_we_give css*/
+
+/*Start People_opinions_about_courses css*/
+.People_opinions_about_courses {
+  background-color: #272db0;
+  padding: 20px 0px;
+}
+.People_opinions_about_courses .row {
   flex-wrap: wrap;
   gap: 20px;
 }
-.People_opinions_about_courses .image{
-width: calc((100% - 20px)/2);
-text-align: center;
-
+.People_opinions_about_courses .image {
+  width: calc((100% - 20px) / 2);
+  text-align: center;
 }
-.People_opinions_about_courses .image img{
-  width :calc(30% * 2);
+.People_opinions_about_courses .image img {
+  width: calc(30% * 2);
 }
-.People_opinions_about_courses .opinions_information{
-width:calc((100% - 20px)/2);
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-gap: 30px;
-color: #fff;
-span{
-  color: #F0C932;
-  font-family: var(--subFont);
+.People_opinions_about_courses .opinions_information {
+  width: calc((100% - 20px) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 30px;
+  color: #fff;
+  span {
+    color: #f0c932;
+    font-family: var(--subFont);
+  }
+  p {
+    width: 80%;
+  }
 }
-p{
-  width: 80%;
-};
-}
-.People_opinions_about_courses .opinions_information .data_in_numbers{
+.People_opinions_about_courses .opinions_information .data_in_numbers {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: center;
-  span{
+  span {
     font-weight: 500;
   }
-  h3{
+  h3 {
     font-size: var(--subFont);
     font-weight: 200;
     font-size: 15px;
   }
 }
 /* media People_opinions_about_courses */
-@media screen and (max-width:880px) {
-  .People_opinions_about_courses .opinions_information{
-    width:100%
-  }
-  .People_opinions_about_courses .image{
+@media screen and (max-width: 880px) {
+  .People_opinions_about_courses .opinions_information {
     width: 100%;
   }
-  .People_opinions_about_courses .image img{
-    width :calc(30% * 2);
+  .People_opinions_about_courses .image {
+    width: 100%;
   }
-  .People_opinions_about_courses .opinions_information p{
+  .People_opinions_about_courses .image img {
+    width: calc(30% * 2);
+  }
+  .People_opinions_about_courses .opinions_information p {
     width: 100%;
   }
 }
 /*end People_opinions_about_courses css*/
-
 
 /*Start courses css*/
 .coursess {
@@ -267,9 +385,8 @@ p{
 
 /* media courses  */
 @media screen and (max-width: 576px) {
-  .coursess .row{
+  .coursess .row {
     flex-wrap: wrap;
-
   }
   .coursess .courses_items .Course,
   .coursess .courses_data,
@@ -292,23 +409,22 @@ p{
     flex-direction: column;
     align-items: start;
   }
-  .coursess .row{
+  .coursess .row {
     justify-content: start;
     flex-wrap: nowrap;
   }
-  .coursess .courses_items{
+  .coursess .courses_items {
     box-sizing: border-box;
     padding: 0px;
     width: 55%;
   }
-  .coursess .courses_data{
+  .coursess .courses_data {
     padding: 0px;
-width: 40%;}
-  
+    width: 40%;
+  }
 }
 /*end  media courses*/
 /*end courses css*/
-
 
 /*Start Testimonials css*/
 
@@ -331,18 +447,18 @@ width: 40%;}
   height: 70px;
   border-radius: 50%;
 }
-.Testimonialer{
+.Testimonialer {
   position: relative;
 }
-.Testimonialer .information::after{
-  content: '';
+.Testimonialer .information::after {
+  content: "";
   position: absolute;
-  top: 0px ;
+  top: 0px;
   right: 0px;
-  border-top: 40px solid #F4F4F4;
+  border-top: 40px solid #f4f4f4;
   border-left: 40px solid #fff;
-  border-right: 40px solid #F4F4F4;
-  border-bottom: 40px  solid #fff;
+  border-right: 40px solid #f4f4f4;
+  border-bottom: 40px solid #fff;
 }
 .Testimonialer {
   box-shadow: 0px 8.23719596862793px 8.23719596862793px rgba(0, 0, 0, 0.1);
